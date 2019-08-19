@@ -5,6 +5,5 @@ class CoursesController < ApplicationController
 
 	def show
 		@course = Course.find(params[:id])
-		@image = Image.find(parans[:id])
 	end
 end
