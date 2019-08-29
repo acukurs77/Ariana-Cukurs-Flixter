@@ -9,7 +9,7 @@ class LessonsController < ApplicationController
 
 	def user_enrolled!
 		if current_user.enrolled_in?(current_lesson.section.course) != true
-			redirect_to root_url, alert: "You must be enrolled to view this lesson!", status: :unauthorized
+			redirect_to course_path(current_course), alert: "You must be enrolled to view this lesson!", status: :unauthorized
 		end
 	end
 
